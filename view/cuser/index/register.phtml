@@ -1,0 +1,12 @@
+<?php if ($error) :?>
+	<div class="alert alert-warning"><?php echo $this->translate('Plase fix the following errors.')?></div>
+<?php endif;?>
+<div class="row">
+<?php
+	$form = $this->form;
+	$form->setAttribute('method','POST');
+	echo $this->form()->OpenTag($form);
+	echo $this->formcollection($form);
+	echo $this->form()->closeTag();
+?>
+</div>
